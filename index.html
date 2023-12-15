@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b5ee7916b8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>aria-components</title>
+  </head>
+  <body>
+<!--
+      Del 3 
+      Tillgänglig hamburgarmeny Skapa en tillgänglig hamburgarmeny, som ska används för att visa och dölja navigeringen i html-koden här nedanför.
+-->
+      <header id="header">
+        
+        <div>LOGGA</div>
+
+        <button
+          id="menuButton"
+          aria-expanded="false"
+          aria-controls="menuContent"
+        >
+        <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="menuContent" aria-hidden="true">
+          <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Tjänster</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div id="wrapper">
+      <!--
+      Del 1  
+      Tillgängligt modalfönster: Skapa ett modalfönster (popup-fönster) som hanterar fokus och tillgänglighet på ett korrekt sätt med hjälp av ARIA-attribut. Fönstret ska kunna öppnas med en knapp på sidan.
+-->
+      <button id="openModalBtn">Öppna</button>
+      <div id="accessibleModal" role="dialog" aria-labelledby="modalTitle">
+        <h2 id="modalTitle">Exempel på modalfönster</h2>
+        <p>Här är lite text i modalfönstret.</p>
+        <button id="closeModalBtn">Stäng</button>
+      </div>
+
+      <!--
+      Del 2
+      Tillängligt modalfönster med <dialog> Skapa en tillgänglig modal med hjälp av det inbyggda HTML-elementet <dialog>. Vilka är fördelarna med att använda denna i tillgänglighets-synpunkt? Skriv svar i kommentarerna till koden.
+-->
+      <button id="openDialogBtn">Öppna</button>
+      <dialog id="accessibleDialog">
+        <h2>Fördelar med &lt;dialog&gt; VS &lt;div&gt; + aria</h2>
+        <p>Att använda &lt;dialog&gt; är mer semantiskt rätt än att använda en div med aria attribut. Med dialog taggen kan skärmläsare och andra hjälpmedel uppfatta att det är ett modalt fönster utan att man behöver lägga till aria attribut. Om vi går på vad W3C själva säger så ska vi som utvecklare välja det mest semantiskt korrekta alternatviet. "Ingen aria är bättre än dålig aria" är ett uttryck för det. När man använder aria skapar man samtidigt ett löfte om att den specifika rollen man tilldelar sitt element ska/förväntas innehålla de interaktiva egenskaper som motsvarande semantiskt korrekta element har. Det kan skapa problem och missförtånd om man inte ser till att få allt rätt.
+        
+        Ur en utvecklares "tillgänglighets perspektiv" (om man kan kalla det för det), tycker jag att det blir tydligare kod att använda dialog-taggen. Sen finns det flera inbyggda egenskaper som gör att JavaScript koden innehåller färre rader. I den här uppgiften exakt hälften faktiskt.  showModal() closeModal(), och "autofocus" i HTML samt att man inte behöver lägga till en eventlistener, keydown på stäng-knappen för att kunna stänga med ESC.
+        </p>
+        <button autofocus id="closeDialogBtn">Stäng</button>
+      </dialog>
+
+
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
+
+
+<!-- 
+      Fördelar med dialog VS div + aria:
+        Att använda &lt;dialog&gt; är mer semantiskt rätt än att använda en div med aria attribut. Med dialog taggen kan skärmläsare och andra hjälpmedel uppfatta att det är ett modalt fönster utan att man behöver lägga till aria attribut. Om vi går på vad W3C själva säger så ska vi som utvecklare välja det mest semantiskt korrekta alternatviet. "Ingen aria är bättre än dålig aria" är ett uttryck för det. När man använder aria skapar man samtidigt ett löfte om att den specifika rollen man tilldelar sitt element ska/förväntas innehålla de interaktiva egenskaper som motsvarande semantiskt korrekta element har. Det kan skapa problem och missförtånd om man inte ser till att få allt rätt.
+        
+        Ur en utvecklares "tillgänglighets perspektiv" (om man kan kalla det för det), tycker jag att det blir tydligare kod att använda dialog-taggen. Sen finns det flera inbyggda egenskaper som gör att JavaScript koden innehåller färre rader. I den här uppgiften exakt hälften faktiskt.  showModal() closeModal(), och "autofocus" i HTML samt att man inte behöver lägga till en eventlistener, keydown på stäng-knappen för att kunna stänga med ESC.      
+ -->
