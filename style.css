@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: lightgreen;
+  background-color: lightgoldenrodyellow;
 }
 
 #menuContent[aria-hidden="true"]{
@@ -27,31 +27,30 @@ ul {
   position: relative;
   list-style-type: none;
   top: 100px;
+  border: 1px solid black;
 }
 
 li {
   padding: 10px;
   /* border: solid 1px black; */
-  background-color: lightgrey;
-  opacity: 0.8;
+  background-color: black;
+  opacity: 0.7;
   width: 200px;
 }
 
 li:hover {
-  background-color: lightseagreen;
-
+  background-color: lightgreen;
 }
 
 li a { 
   text-decoration: none;
-  color: black;
-  width: 100%;
+  color: white;
   font-size: large;
   font-weight: bold;
 }
 
 li a:hover {
- color: white;
+ color: black;
 }
 
 
@@ -77,12 +76,11 @@ button {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  border: 1px solid black;
+  padding: 30px;
+  background-color: lightgreen;
 }
 
-#openDialogBtn {
-  grid-column: 2;
-  grid-row: 3;
-}
 
 dialog[open] {
   display: flex;
@@ -95,12 +93,13 @@ dialog[open] {
   top: 70px;
   left: 30px;
   right: 30px;
+  border-color: red;
   
 }
 
 ::backdrop {
   background-color:black;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 p {
