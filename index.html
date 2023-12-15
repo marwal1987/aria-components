@@ -16,9 +16,6 @@
       Tillgänglig hamburgarmeny Skapa en tillgänglig hamburgarmeny, som ska används för att visa och dölja navigeringen i html-koden här nedanför.
 -->
       <header id="header">
-        
-        <div>LOGGA</div>
-
         <button
           id="menuButton"
           aria-expanded="false"
@@ -54,14 +51,12 @@
       <button id="openDialogBtn">Öppna</button>
       <dialog id="accessibleDialog">
         <h2>Fördelar med &lt;dialog&gt; VS &lt;div&gt; + aria</h2>
-        <p>Att använda &lt;dialog&gt; är mer semantiskt rätt än att använda en div med aria attribut. Med dialog taggen kan skärmläsare och andra hjälpmedel uppfatta att det är ett modalt fönster utan att man behöver lägga till aria attribut. Om vi går på vad W3C själva säger så ska vi som utvecklare välja det mest semantiskt korrekta alternatviet. "Ingen aria är bättre än dålig aria" är ett uttryck för det. När man använder aria skapar man samtidigt ett löfte om att den specifika rollen man tilldelar sitt element ska/förväntas innehålla de interaktiva egenskaper som motsvarande semantiskt korrekta element har. Det kan skapa problem och missförtånd om man inte ser till att få allt rätt.
+        <p>Att använda &lt;dialog&gt; är mer semantiskt korrekt än att använda en div med aria attribut. Med dialog taggen kan skärmläsare och andra hjälpmedel uppfatta att det är ett modalt fönster utan att man behöver lägga till aria attribut. Om vi går på vad W3C själva säger så ska vi som utvecklare välja det mest semantiskt korrekta alternativiet. "Ingen aria är bättre än dålig aria" är ett uttryck för det. När man använder aria skapar man samtidigt ett löfte om att den specifika rollen man tilldelar sitt element ska/förväntas innehålla de interaktiva egenskaper som motsvarande semantiskt korrekta element har. Det kan skapa problem och missförtånd om man inte ser till att få allt rätt.
         
         Ur en utvecklares "tillgänglighets perspektiv" (om man kan kalla det för det), tycker jag att det blir tydligare kod att använda dialog-taggen. Sen finns det flera inbyggda egenskaper som gör att JavaScript koden innehåller färre rader. I den här uppgiften exakt hälften faktiskt.  showModal() closeModal(), och "autofocus" i HTML samt att man inte behöver lägga till en eventlistener, keydown på stäng-knappen för att kunna stänga med ESC.
         </p>
         <button autofocus id="closeDialogBtn">Stäng</button>
       </dialog>
-
-
     </div>
 
     <script src="code.js"></script>

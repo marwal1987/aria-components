@@ -24,9 +24,10 @@
 }
 
 ul {
-  position: relative;
+  position: fixed;
   list-style-type: none;
-  top: 100px;
+  right: 30px;
+  top: 80px;
   border: 1px solid black;
 }
 
